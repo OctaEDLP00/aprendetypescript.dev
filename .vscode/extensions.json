@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "ms-vscode.vscode-typescript-next",
+    "usernamehw.errorlens",
+    "editorconfig.editorconfig",
+    "bierner.emojisense",
+    "oliversturm.fix-json",
+    "kisstkondoros.vscode-gutter-preview",
+    "wix.vscode-import-cost",
+    "xabikos.javascriptsnippets",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "pflannery.vscode-versionlens",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss",
+    "chakrounanas.turbo-console-log",
+    "bierner.markdown-preview-github-styles",
+    "yzhang.markdown-all-in-one",
+    "svelte.svelte-vscode",
+    "heybourn.headwind",
+    "unifiedjs.vscode-mdx"
+  ],
+  "unwantedRecommendations": []
+}

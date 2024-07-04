@@ -1,0 +1,13 @@
+---
+import { SOCIAL_NETWORKS } from '@/const/socialNetworks';
+---
+
+{
+  SOCIAL_NETWORKS.map(({ href, rel, target, IconComponent }) => (
+    <li>
+      <a href={href} rel={rel} target={target}>
+        <IconComponent />
+      </a>
+    </li>
+  ))
+}

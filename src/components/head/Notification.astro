@@ -1,0 +1,11 @@
+<script>
+	import requestNotification from "@/libs/Notification"
+
+	if ("Notification" in window) {
+		requestNotification({
+			body: "",
+			icon: "",
+			notificationMsg: "",
+		})
+	}
+</script>

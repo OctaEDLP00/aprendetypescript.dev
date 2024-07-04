@@ -1,0 +1,8 @@
+<main class='flex min-h-screen items-center justify-center text-center'>
+	Redirigiendo a Github...
+</main>
+
+<script>
+	const { signIn } = await import("auth-astro/client")
+	signIn("github", { callbackUrl: "/api/auth/callback/github" })
+</script>

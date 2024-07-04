@@ -1,0 +1,35 @@
+---
+import "@/styles/global.css"
+import Navbar from "@/components/sections/Navbar.astro"
+import Footer from "@/components/sections/Footer.astro"
+import Meta from "@/components/head/Meta.astro"
+import EasterEgg from "@/components/head/EasterEgg.astro"
+import Notification from "@/components/head/Notification.astro"
+import SchemaMarkup from "@/components/head/SchemaMarkup.astro"
+
+interface Props {
+	title: string
+	ogImage?: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<EasterEgg />
+		<Meta title={title} />
+		<Notification />
+		<SchemaMarkup />
+	</head>
+	<body>
+		<div id='App'>
+			<Navbar />
+			<main>
+				<slot />
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>

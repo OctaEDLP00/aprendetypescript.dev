@@ -1,0 +1,7 @@
+---
+import { getSchemaScripts } from '@/libs/generateSchemaMarkup'
+
+const schemaScripts = getSchemaScripts()
+---
+
+<script is:inline set:html={JSON.stringify([schemaScripts], null, 2)} type='application/ld+json' />

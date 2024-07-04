@@ -1,0 +1,47 @@
+<script>
+	// import confetti from 'canvas-confetti'
+	import Toastify from "toastify-js"
+	import { $query } from "@/libs/Dom"
+	// import { Konami } from '@/libs/Konami'
+	import { konamiCodes } from "@/const/konami-codes"
+
+	const {} = konamiCodes
+	// let konamiCodeInProgress = false
+	const $container = $query("#App") as HTMLDivElement
+	// const $body = $query('body') as HTMLBodyElement
+
+	interface Manager {
+		audioInstance: HTMLAudioElement | null
+		getAudioInstance: (audioSrc: string) => HTMLAudioElement | null
+	}
+
+	const audioManager: Manager = {
+		audioInstance: null,
+		getAudioInstance: (audioSrc: string) => {
+			if (!audioManager.audioInstance) {
+				audioManager.audioInstance = new Audio(audioSrc)
+				return audioManager.audioInstance
+			}
+			return null
+		},
+	}
+
+	export const activateEasterEgg = () => {
+		const toast = Toastify({
+			selector: $container,
+			text: "✔ ✅ Easter egg desbloqueado!",
+			duration: 3000,
+			gravity: "bottom",
+			style: {
+				background: "linear-gradient(to right, #0e03c7, #058eaa)",
+			},
+		})
+		toast.showToast()
+	}
+
+	const EventListenerFn = ({ key }: KeyboardEvent) => {
+		console.log(key)
+	}
+
+	window.addEventListener("keydown", EventListenerFn)
+</script>
